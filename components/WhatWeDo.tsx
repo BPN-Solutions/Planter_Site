@@ -129,7 +129,7 @@ export default function WhatWeDo() {
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
             transition={{ duration: 0.7 }}
-            className="lg:sticky lg:top-32 space-y-6"
+            className="hidden lg:block lg:sticky lg:top-32 space-y-6"
           >
             {services.map((service) => (
               <button
@@ -194,54 +194,102 @@ export default function WhatWeDo() {
             ))}
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
-            transition={{ duration: 0.7 }}
-            className="space-y-12"
-          >
-            {services.map((service, index) => (
-              <div
-                key={service.id}
-                ref={(el) => {
-                  serviceRefs.current[service.id] = el;
-                }}
-                className="scroll-mt-32"
-              >
-                <Link
-                  href={service.href}
-                  className="group block relative aspect-[16/10] overflow-hidden rounded-lg bg-gray-100 shadow-lg hover:shadow-2xl transition-shadow duration-300"
+          <div className="hidden lg:block">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
+              transition={{ duration: 0.7 }}
+              className="space-y-12"
+            >
+              {services.map((service, index) => (
+                <div
+                  key={service.id}
+                  ref={(el) => {
+                    serviceRefs.current[service.id] = el;
+                  }}
+                  className="scroll-mt-32"
                 >
+                  <Link
+                    href={service.href}
+                    className="group block relative aspect-[16/10] overflow-hidden rounded-lg bg-gray-100 shadow-lg hover:shadow-2xl transition-shadow duration-300"
+                  >
+                    <div className="absolute inset-0 bg-gray-300 flex items-center justify-center text-gray-500">
+                      {service.title} image placeholder
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-8">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white">
+                          {service.icon}
+                        </div>
+                        <span className="text-sm font-mono text-white/70">
+                          {service.number}
+                        </span>
+                      </div>
+                      <h3 className="text-white text-2xl md:text-3xl font-serif font-bold mb-3">
+                        {service.title}
+                      </h3>
+                      <p className="text-white/90 text-sm md:text-base mb-4 max-w-2xl">
+                        {service.description}
+                      </p>
+                      <span className="inline-flex items-center gap-2 text-white font-medium group-hover:gap-3 transition-all">
+                        Learn More
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </span>
+                    </div>
+                  </Link>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+          <div className="lg:hidden -mx-6 space-y-0">
+            {services.map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="relative h-screen snap-start flex-shrink-0"
+              >
+                <Link href={service.href} className="group block relative w-full h-full">
                   <div className="absolute inset-0 bg-gray-300 flex items-center justify-center text-gray-500">
                     {service.title} image placeholder
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-8">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white">
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+
+                  <div className="absolute inset-0 flex flex-col justify-end p-8">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white">
                         {service.icon}
                       </div>
-                      <span className="text-sm font-mono text-white/70">
+                      <span className="text-base font-mono text-white/60">
                         {service.number}
                       </span>
                     </div>
-                    <h3 className="text-white text-2xl md:text-3xl font-serif font-bold mb-3">
+
+                    <h3 className="text-white text-4xl font-serif font-bold mb-4">
                       {service.title}
                     </h3>
-                    <p className="text-white/90 text-sm md:text-base mb-4 max-w-2xl">
+
+                    <p className="text-white/90 text-lg mb-6">
                       {service.description}
                     </p>
-                    <span className="inline-flex items-center gap-2 text-white font-medium group-hover:gap-3 transition-all">
+
+                    <span className="inline-flex items-center gap-3 text-white font-semibold text-lg">
                       Learn More
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </span>
                   </div>
                 </Link>
-              </div>
+              </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

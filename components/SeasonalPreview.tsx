@@ -45,17 +45,19 @@ export default function SeasonalPreview() {
 
   return (
     <section ref={ref} className="w-full section-spacing bg-white overflow-hidden">
-      <div className="container-padding max-w-[1800px] mx-auto">
+      <div className="container-padding max-w-[1800px] mx-auto mb-8 lg:mb-16">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
-          className="text-center text-forest-900 mb-16"
+          className="text-center text-forest-900"
         >
           See the Transformation
         </motion.h2>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 h-[600px] lg:h-[700px]">
+      <div className="lg:container-padding lg:max-w-[1800px] lg:mx-auto">
+        <div className="flex lg:grid overflow-x-auto lg:overflow-visible snap-x snap-mandatory lg:snap-none scrollbar-hide lg:grid-cols-4 gap-0 h-[70vh] lg:h-[700px] -mx-6 px-6 lg:mx-0 lg:px-0">
           {seasons.map((season, index) => (
             <motion.div
               key={season.id}
@@ -64,7 +66,7 @@ export default function SeasonalPreview() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               onMouseEnter={() => setHoveredSeason(season.id)}
               onMouseLeave={() => setHoveredSeason(null)}
-              className="relative group cursor-pointer overflow-hidden"
+              className="relative group cursor-pointer overflow-hidden snap-center flex-shrink-0 w-[85vw] lg:w-auto lg:flex-1"
               style={{
                 flex: hoveredSeason === season.id ? '2' : '1',
                 transition: 'flex 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -82,31 +84,28 @@ export default function SeasonalPreview() {
                 }}
               />
 
-              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
-                <motion.div
-                  initial={false}
-                  animate={{
-                    opacity: hoveredSeason === season.id || hoveredSeason === null ? 1 : 0.5,
-                    y: hoveredSeason === season.id ? 0 : 10,
-                  }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <h3 className="text-white text-3xl md:text-4xl lg:text-5xl mb-3 font-serif font-bold">
+              <div className="absolute inset-0 flex flex-col justify-end p-6 lg:p-8">
+                <div>
+                  <h3 className="text-white text-4xl lg:text-5xl mb-3 font-serif font-bold">
                     {season.label}
                   </h3>
+                  
+                  <p className="text-white/90 text-base lg:hidden">
+                    {season.description}
+                  </p>
                   
                   <motion.p
                     initial={false}
                     animate={{
-                      opacity: hoveredSeason === season.id ? 1 : 0,
+                      opacity: hoveredSeason === season.id || hoveredSeason === null ? 1 : 0.5,
                       height: hoveredSeason === season.id ? 'auto' : 0,
                     }}
                     transition={{ duration: 0.4 }}
-                    className="text-white/95 text-base md:text-lg overflow-hidden"
+                    className="hidden lg:block text-white/95 text-lg overflow-hidden"
                   >
                     {season.description}
                   </motion.p>
-                </motion.div>
+                </div>
 
                 <motion.div
                   initial={false}
@@ -115,7 +114,7 @@ export default function SeasonalPreview() {
                     y: hoveredSeason === season.id ? 0 : 20,
                   }}
                   transition={{ duration: 0.3, delay: 0.1 }}
-                  className="mt-4"
+                  className="mt-4 hidden lg:block"
                 >
                   <div className="inline-flex items-center gap-2 text-white font-medium">
                     <span className="text-sm">Explore</span>
@@ -133,6 +132,15 @@ export default function SeasonalPreview() {
             </motion.div>
           ))}
         </div>
+      </div>
+
+      <div className="flex lg:hidden justify-center gap-2 mt-6 container-padding">
+        {seasons.map((season) => (
+          <div
+            key={season.id}
+            className="w-2 h-2 rounded-full bg-forest-600/30"
+          />
+        ))}
       </div>
     </section>
   );
