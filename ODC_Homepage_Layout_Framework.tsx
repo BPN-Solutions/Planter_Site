@@ -361,7 +361,7 @@ export default function HomePage() {
           </div>
           {/* Bottom */}
           <div className="flex justify-between items-center mt-12 pt-8 border-t">
-            <p>© 2024 Outdoor Décor by Eli</p>
+            <p>© 2026 Outdoor Décor by Eli</p>
             <div className="flex gap-4">
               <a href="/privacy">Privacy</a>
               <a href="/terms">Terms</a>

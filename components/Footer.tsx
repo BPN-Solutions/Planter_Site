@@ -106,7 +106,7 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-800 gap-6">
           <p className="text-gray-400 text-sm">
-            © 2024 Planter Business. All rights reserved.
+            © 2026 Planter Business. All rights reserved.
           </p>
 
           <div className="flex gap-6 text-sm">

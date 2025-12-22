@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import TrustBar from '@/components/TrustBar';
+import VideoSection from '@/components/VideoSection';
 import HowItWorks from '@/components/HowItWorks';
 import WhatWeDo from '@/components/WhatWeDo';
 import SeasonalPreview from '@/components/SeasonalPreview';
@@ -22,6 +23,13 @@ export default function HomePage() {
       <main className="pt-[72px]">
         <Hero />
         <TrustBar />
+        
+        <VideoSection 
+          videoId="dQw4w9WgXcQ"
+          title="See How We Transform Your Space"
+          subtitle="Watch our process from consultation to installation"
+        />
+        
         <HowItWorks />
         <WhatWeDo />
         <SeasonalPreview />
