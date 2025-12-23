@@ -1,0 +1,32 @@
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import Chatbot from '@/components/Chatbot';
+import PlanterHero from '@/components/planter-subscriptions/PlanterHero';
+import HowItWorks from '@/components/HowItWorks';
+import SubscriptionTiers from '@/components/planter-subscriptions/SubscriptionTiers';
+import SeasonalPreview from '@/components/SeasonalPreview';
+import BeforeAfterGallery from '@/components/BeforeAfterGallery';
+import FinalCTA from '@/components/FinalCTA';
+
+export const metadata = {
+  title: 'Planter Subscriptions | Planter Business',
+  description: 'Year-round beauty with seasonal refreshes. Professional design, installation, and maintenance included.',
+};
+
+export default function PlanterSubscriptionsPage() {
+  return (
+    <>
+      <Header />
+      <main className="pt-[72px]">
+        <PlanterHero />
+        <HowItWorks />
+        <SubscriptionTiers />
+        <SeasonalPreview />
+        <BeforeAfterGallery />
+        <FinalCTA />
+      </main>
+      <Footer />
+      <Chatbot />
+    </>
+  );
+}
