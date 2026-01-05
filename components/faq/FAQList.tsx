@@ -18,7 +18,7 @@ const faqs = [
       },
       {
         q: 'Can I pause or cancel my subscription?',
-        a: 'You can cancel at the end of your annual term with 30 days notice. We don't offer mid-season pauses, but we can discuss alternative solutions if circumstances change.',
+        a: 'You can cancel at the end of your annual term with 30 days notice. We don\'t offer mid-season pauses, but we can discuss alternative solutions if circumstances change.',
       },
       {
         q: 'What if I only want one or two seasons?',
@@ -35,11 +35,11 @@ const faqs = [
       },
       {
         q: 'Do I need to be home for installation?',
-        a: 'No, you don't need to be home. We'll coordinate a convenient installation window and work independently. Many clients provide gate codes or access instructions.',
+        a: 'No, you don\'t need to be home. We\'ll coordinate a convenient installation window and work independently. Many clients provide gate codes or access instructions.',
       },
       {
         q: 'Do I need to do any maintenance?',
-        a: 'Our subscription service is completely maintenance-free. We handle all watering, deadheading, and care. If you have irrigation, we can work with that system. Otherwise, we'll handle watering during our regular visits.',
+        a: 'Our subscription service is completely maintenance-free. We handle all watering, deadheading, and care. If you have irrigation, we can work with that system. Otherwise, we\'ll handle watering during our regular visits.',
       },
       {
         q: 'What happens to my planters between seasons?',
@@ -69,11 +69,11 @@ const faqs = [
     questions: [
       {
         q: 'Can I choose the plants and colors?',
-        a: 'Yes! We'll discuss your preferences during the initial consultation. While we provide expert recommendations based on sun exposure and seasonality, you have final approval on the design.',
+        a: 'Yes! We\'ll discuss your preferences during the initial consultation. While we provide expert recommendations based on sun exposure and seasonality, you have final approval on the design.',
       },
       {
         q: 'What if my planters get damaged or plants die?',
-        a: 'We monitor plant health during our regular visits and replace any plants that fail to thrive at no additional cost. For planter damage, we'll assess and discuss repair or replacement options.',
+        a: 'We monitor plant health during our regular visits and replace any plants that fail to thrive at no additional cost. For planter damage, we\'ll assess and discuss repair or replacement options.',
       },
       {
         q: 'Do you use real or artificial plants?',
@@ -86,7 +86,7 @@ const faqs = [
     questions: [
       {
         q: 'How do I get started?',
-        a: 'Request a consultation through our website or give us a call. We'll schedule a visit to see your space, discuss your preferences, and provide a custom quote.',
+        a: 'Request a consultation through our website or give us a call. We\'ll schedule a visit to see your space, discuss your preferences, and provide a custom quote.',
       },
       {
         q: 'How far in advance should I book?',
@@ -94,7 +94,7 @@ const faqs = [
       },
       {
         q: 'Do you provide the planters or do I need my own?',
-        a: 'We can work with your existing planters or provide premium planters as part of your service. We'll discuss options during your consultation.',
+        a: 'We can work with your existing planters or provide premium planters as part of your service. We\'ll discuss options during your consultation.',
       },
     ],
   },
