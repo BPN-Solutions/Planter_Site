@@ -15,8 +15,18 @@ export default function Hero() {
         />
       </div>
 
-      {/* Gradient Overlay for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/10" />
+      {/* Layered overlays for optimal text readability */}
+      {/* Base dark overlay */}
+      <div className="absolute inset-0 bg-black/40" />
+      {/* Radial vignette - darker in center where text lives */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.4) 100%)'
+        }}
+      />
+      {/* Bottom gradient for depth */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
 
       {/* Centered Content Overlay */}
       <div className="relative z-10 h-full flex items-center justify-center">
@@ -30,7 +40,8 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-white mb-4 drop-shadow-lg"
+            className="text-white mb-4"
+            style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5), 0 4px 40px rgba(0,0,0,0.3)' }}
           >
             Your Private Gardener
           </motion.h1>
@@ -39,7 +50,8 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto font-light"
+            className="text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto"
+            style={{ textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}
           >
             Professional seasonal planters, designed and installed for you.
           </motion.p>
@@ -52,13 +64,13 @@ export default function Hero() {
           >
             <Link
               href="#how-it-works"
-              className="px-8 py-3 bg-white/10 backdrop-blur-sm border border-white/30 text-white font-medium rounded-md hover:bg-white/20 transition-all text-center"
+              className="px-8 py-3.5 bg-white/15 backdrop-blur-md border border-white/40 text-white font-medium rounded-md hover:bg-white/25 transition-all text-center shadow-lg"
             >
               See How It Works
             </Link>
             <Link
               href="#contact"
-              className="px-8 py-3 bg-white text-forest-800 font-semibold rounded-md hover:bg-cream-100 transition-colors text-center"
+              className="px-8 py-3.5 bg-white text-forest-800 font-semibold rounded-md hover:bg-cream-100 transition-colors text-center shadow-lg"
             >
               Request a Consultation
             </Link>
