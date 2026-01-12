@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Planter Business | Your Private Gardener',
     description: 'Professional seasonal planters, designed and installed for you.',
-    images: ['/images/potted_plants_patio_pool.webp'],
+    images: ['/images/seasonal decor.jpeg'],
   },
 };
 
