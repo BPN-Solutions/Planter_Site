@@ -6,9 +6,11 @@ import Link from 'next/link';
 export default function IrrigationHero() {
   return (
     <section className="w-full min-h-[90vh] relative overflow-hidden">
-      <div className="absolute inset-0 bg-gray-300 flex items-center justify-center text-gray-500">
-        Irrigation hero image
-      </div>
+      <img
+        src="/images/irrigation.jpeg"
+        alt="Container plant irrigation system"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
       
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
 

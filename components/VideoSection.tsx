@@ -15,7 +15,7 @@ export default function VideoSection({ videoId, title, subtitle }: VideoSectionP
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section ref={ref} className="w-full bg-forest-900 py-16 md:py-20 lg:py-24">
+    <section ref={ref} className="w-full bg-forest-900 pt-16 md:pt-20 lg:pt-24 pb-0">
       {/* Text Block Above Video */}
       {(title || subtitle) && (
         <motion.div

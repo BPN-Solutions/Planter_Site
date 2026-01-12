@@ -22,7 +22,7 @@ const steps = [
     ),
   },
   {
-    title: 'No Maintenance Required',
+    title: 'No Maintenance',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 13l4 4L19 7" />
@@ -54,18 +54,6 @@ const itemVariants = {
   },
 };
 
-const lineVariants = {
-  hidden: { scaleX: 0, opacity: 0 },
-  visible: {
-    scaleX: 1,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: 'easeOut' as const,
-      delay: 0.4,
-    },
-  },
-};
 
 export default function HowItWorks() {
   const ref = useRef(null);
@@ -75,59 +63,57 @@ export default function HowItWorks() {
     <section
       id="how-it-works"
       ref={ref}
-      className="w-full py-20 md:py-28 bg-forest-900"
+      className="w-full pt-16 md:pt-20 pb-20 md:pb-28 bg-forest-900"
     >
-      <div className="container-padding max-w-[1000px] mx-auto">
+      <div className="container-padding max-w-[1100px] mx-auto">
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+          transition={{ duration: 0.4 }}
+          className="text-center text-white/50 text-xs uppercase tracking-[0.25em] mb-10"
+        >
+          How It Works
+        </motion.p>
+
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
-          className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-0"
+          className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-0"
         >
           {steps.map((step, index) => (
-            <div key={index} className="flex items-center">
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className="flex items-center"
+            >
               {/* Step Item */}
-              <motion.div
-                variants={itemVariants}
-                className="flex flex-col items-center text-center group"
-              >
+              <div className="flex flex-col items-center text-center group w-[180px]">
                 <div className="relative">
                   {/* Glow effect on hover */}
                   <div className="absolute inset-0 rounded-full bg-white/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   {/* Icon circle */}
-                  <div className="relative w-[72px] h-[72px] rounded-full bg-white/[0.08] border border-white/20 text-white flex items-center justify-center mb-5 transition-all duration-300 group-hover:bg-white/[0.15] group-hover:border-white/30 group-hover:scale-105">
+                  <div className="relative w-[72px] h-[72px] rounded-full bg-white/[0.08] border border-white/20 text-white flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-white/[0.15] group-hover:border-white/30 group-hover:scale-105">
                     {step.icon}
                   </div>
                 </div>
 
-                <span className="text-[15px] font-medium text-white/90 tracking-wide group-hover:text-white transition-colors duration-300">
+                <span className="text-[14px] font-medium text-white/90 tracking-wide group-hover:text-white transition-colors duration-300">
                   {step.title}
                 </span>
-              </motion.div>
+              </div>
 
               {/* Connector Line */}
               {index < steps.length - 1 && (
-                <motion.div
-                  variants={lineVariants}
-                  className="hidden md:flex items-center mx-12 origin-left"
-                >
-                  <div className="w-20 h-[1px] bg-gradient-to-r from-white/30 to-white/10" />
-                  <svg className="w-3 h-3 text-white/30 -ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <div className="hidden md:flex items-center w-16 justify-center">
+                  <div className="w-10 h-[1px] bg-white/20" />
+                  <svg className="w-2.5 h-2.5 text-white/20 -ml-0.5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
                   </svg>
-                </motion.div>
+                </div>
               )}
-
-              {/* Mobile connector */}
-              {index < steps.length - 1 && (
-                <motion.div
-                  variants={lineVariants}
-                  className="md:hidden absolute left-1/2 -translate-x-1/2 h-8 w-[1px] bg-gradient-to-b from-white/30 to-white/10 -mb-4"
-                  style={{ display: 'none' }}
-                />
-              )}
-            </div>
+            </motion.div>
           ))}
         </motion.div>
       </div>

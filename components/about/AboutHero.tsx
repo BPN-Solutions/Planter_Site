@@ -5,9 +5,11 @@ import { motion } from 'framer-motion';
 export default function AboutHero() {
   return (
     <section className="w-full min-h-[70vh] relative overflow-hidden">
-      <div className="absolute inset-0 bg-gray-300 flex items-center justify-center text-gray-500">
-        About us hero image
-      </div>
+      <img
+        src="/images/about us picture.png"
+        alt="The Planter Business team"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
       
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
 
