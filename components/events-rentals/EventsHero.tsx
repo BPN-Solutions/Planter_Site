@@ -7,7 +7,7 @@ export default function EventsHero() {
   return (
     <section className="w-full min-h-[90vh] relative overflow-hidden">
       <img
-        src="/images/event flower.webp"
+        src="/images/event-flower.webp"
         alt="Event floral arrangements"
         className="absolute inset-0 w-full h-full object-cover"
       />

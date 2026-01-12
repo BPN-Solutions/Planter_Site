@@ -6,7 +6,7 @@ export default function AboutHero() {
   return (
     <section className="w-full min-h-[70vh] relative overflow-hidden">
       <img
-        src="/images/about us picture.png"
+        src="/images/about-us-picture.png"
         alt="The Planter Business team"
         className="absolute inset-0 w-full h-full object-cover"
       />

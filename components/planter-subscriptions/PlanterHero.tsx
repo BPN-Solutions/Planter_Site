@@ -7,7 +7,7 @@ export default function PlanterHero() {
   return (
     <section className="w-full min-h-[90vh] relative overflow-hidden">
       <img
-        src="/images/corporate planter.jpg"
+        src="/images/corporate-planter.jpg"
         alt="Professional planter arrangements"
         className="absolute inset-0 w-full h-full object-cover"
       />

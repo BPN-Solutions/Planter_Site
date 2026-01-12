@@ -7,7 +7,7 @@ export default function SeasonalDecorHero() {
   return (
     <section className="w-full min-h-[90vh] relative overflow-hidden">
       <img
-        src="/images/seasonal decor.jpeg"
+        src="/images/seasonal-decor.jpeg"
         alt="Seasonal decor arrangements"
         className="absolute inset-0 w-full h-full object-cover"
       />

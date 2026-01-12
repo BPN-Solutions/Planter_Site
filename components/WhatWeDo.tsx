@@ -11,7 +11,7 @@ const services = [
     title: 'Planter Subscriptions',
     description: 'Year-round beauty with seasonal refreshes. Professional design, installation, and maintenance included.',
     href: '/planter-subscriptions',
-    image: '/images/corporate planter.jpg',
+    image: '/images/corporate-planter.jpg',
     icon: (
       // Potted plant icon
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -24,7 +24,7 @@ const services = [
     title: 'Seasonal Decor',
     description: 'Special occasion decorations for holidays, life events, and celebrations. One-time installations.',
     href: '/seasonal-decor',
-    image: '/images/seasonal decor.jpeg',
+    image: '/images/seasonal-decor.jpeg',
     icon: (
       // Wreath/decorative circle icon
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -53,7 +53,7 @@ const services = [
     title: 'Events & Rentals',
     description: 'Short-term planter solutions for parties, corporate events, real estate staging, and vacation rentals.',
     href: '/events-rentals',
-    image: '/images/event flower.webp',
+    image: '/images/event-flower.webp',
     icon: (
       // Calendar with sparkle icon
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
