@@ -40,7 +40,7 @@ const containerVariants = {
       delayChildren: 0.1,
     },
   },
-};
+} as const;
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -49,7 +49,7 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: 'easeOut',
+      ease: 'easeOut' as const,
     },
   },
 };
@@ -61,7 +61,7 @@ const lineVariants = {
     opacity: 1,
     transition: {
       duration: 0.6,
-      ease: 'easeOut',
+      ease: 'easeOut' as const,
       delay: 0.4,
     },
   },
