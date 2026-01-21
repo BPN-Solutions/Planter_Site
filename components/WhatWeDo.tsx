@@ -123,7 +123,7 @@ export default function WhatWeDo() {
           initial={{ opacity: 0, x: -30 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
           transition={{ duration: 0.7 }}
-          className="sticky top-0 h-screen flex flex-col justify-center pl-8 xl:pl-16 pr-8 space-y-6"
+          className="sticky top-20 h-[calc(100vh-80px)] flex flex-col justify-center pl-8 xl:pl-16 pr-8 space-y-6"
         >
           {services.map((service) => (
             <button
@@ -185,36 +185,40 @@ export default function WhatWeDo() {
               ref={(el) => {
                 serviceRefs.current[service.id] = el;
               }}
-              className="h-screen"
+              className="h-[calc(100vh-80px)]"
             >
               <Link
                 href={service.href}
-                className="group block relative h-full overflow-hidden rounded-l-2xl bg-gray-100"
+                className="group block relative h-full overflow-hidden rounded-l-2xl bg-gray-100 cursor-pointer"
               >
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-opacity duration-300 group-hover:from-black/80" />
+
+                {/* Click indicator arrow - appears on hover */}
+                <div className="absolute top-1/2 right-8 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:right-6">
+                  <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white border border-white/30">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+
                 <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-12">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white">
                       {service.icon}
                     </div>
                   </div>
-                  <h3 className="text-white text-2xl md:text-3xl lg:text-4xl font-[var(--font-sora)] font-bold mb-3">
+                  <h3 className="text-white text-2xl md:text-3xl lg:text-4xl font-[var(--font-sora)] font-bold mb-3 group-hover:underline decoration-2 underline-offset-4">
                     {service.title}
                   </h3>
-                  <p className="text-white/90 text-base lg:text-lg mb-4 max-w-2xl">
+                  <p className="text-white/90 text-base lg:text-lg max-w-2xl">
                     {service.description}
                   </p>
-                  <span className="inline-flex items-center gap-2 text-white font-medium group-hover:gap-3 transition-all">
-                    Learn More
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </span>
                 </div>
               </Link>
             </div>
@@ -230,7 +234,7 @@ export default function WhatWeDo() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="relative h-screen"
+            className="relative h-[calc(100vh-80px)]"
           >
             <Link href={service.href} className="group block relative w-full h-full">
               <img
@@ -240,6 +244,15 @@ export default function WhatWeDo() {
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+
+              {/* Tap indicator */}
+              <div className="absolute top-1/2 right-6 -translate-y-1/2">
+                <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white border border-white/30 animate-pulse">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
 
               <div className="absolute inset-0 flex flex-col justify-end p-8">
                 <div className="flex items-center gap-4 mb-4">
@@ -252,16 +265,9 @@ export default function WhatWeDo() {
                   {service.title}
                 </h3>
 
-                <p className="text-white/90 text-lg mb-6">
+                <p className="text-white/90 text-lg">
                   {service.description}
                 </p>
-
-                <span className="inline-flex items-center gap-3 text-white font-semibold text-lg">
-                  Learn More
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </span>
               </div>
             </Link>
           </motion.div>

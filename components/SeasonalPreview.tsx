@@ -123,7 +123,7 @@ export default function SeasonalPreview() {
               ref={(el) => {
                 seasonRefs.current[season.id] = el;
               }}
-              className="h-screen"
+              className="h-[calc(100vh-80px)]"
             >
               <div className="group block relative h-full overflow-hidden rounded-r-2xl bg-gray-100">
                 <img
@@ -155,7 +155,7 @@ export default function SeasonalPreview() {
           initial={{ opacity: 0, x: 30 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
           transition={{ duration: 0.7 }}
-          className="sticky top-0 h-screen flex flex-col justify-center pl-8 pr-8 xl:pr-16 space-y-6"
+          className="sticky top-20 h-[calc(100vh-80px)] flex flex-col justify-center pl-8 pr-8 xl:pr-16 space-y-6"
         >
           {seasons.map((season) => (
             <button
@@ -218,7 +218,7 @@ export default function SeasonalPreview() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="relative h-screen"
+            className="relative h-[calc(100vh-80px)]"
           >
             <div className="block relative w-full h-full">
               <img
