@@ -185,7 +185,7 @@ export default function WhatWeDo() {
               ref={(el) => {
                 serviceRefs.current[service.id] = el;
               }}
-              className="h-[calc(100vh-80px)]"
+              className="h-[calc(100vh-80px)] scroll-mt-20"
             >
               <Link
                 href={service.href}

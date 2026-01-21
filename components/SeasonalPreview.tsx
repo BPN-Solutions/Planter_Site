@@ -123,7 +123,7 @@ export default function SeasonalPreview() {
               ref={(el) => {
                 seasonRefs.current[season.id] = el;
               }}
-              className="h-[calc(100vh-80px)]"
+              className="h-[calc(100vh-80px)] scroll-mt-20"
             >
               <div className="group block relative h-full overflow-hidden rounded-r-2xl bg-gray-100">
                 <img
