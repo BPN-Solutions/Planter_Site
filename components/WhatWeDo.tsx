@@ -63,10 +63,35 @@ const services = [
 
 export default function WhatWeDo() {
   const [activeService, setActiveService] = useState('planters');
+  const [isScrollEnabled, setIsScrollEnabled] = useState(false);
   const sectionRef = useRef(null);
   const serviceRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: '-100px' });
 
+  // Observer for section snap - enables internal scrolling when section is fully visible
+  useEffect(() => {
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsScrollEnabled(entry.intersectionRatio > 0.8);
+        });
+      },
+      {
+        threshold: [0, 0.5, 0.8, 1],
+      }
+    );
+
+    if (sectionRef.current) {
+      sectionObserver.observe(sectionRef.current);
+    }
+
+    return () => {
+      sectionObserver.disconnect();
+    };
+  }, []);
+
+  // Observer for active service tracking
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -180,7 +205,12 @@ export default function WhatWeDo() {
         </motion.div>
 
         {/* Service Cards - each takes full viewport height */}
-        <div className="snap-y snap-mandatory overflow-y-scroll h-full scrollbar-hide">
+        <div
+          ref={scrollContainerRef}
+          className={`snap-y snap-mandatory h-full scrollbar-hide ${
+            isScrollEnabled ? 'overflow-y-scroll' : 'overflow-hidden'
+          }`}
+        >
           {services.map((service) => (
             <div
               key={service.id}
