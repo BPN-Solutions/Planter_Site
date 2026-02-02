@@ -9,7 +9,7 @@ const services = [
   {
     id: 'planters',
     title: 'Planter Subscriptions',
-    description: 'Year-round beauty with seasonal refreshes. Professional design, installation, and maintenance included.',
+    description: 'Year-round beauty with seasonal refreshes. Professional design, installation, and maintenance available.',
     href: '/planter-subscriptions',
     image: '/images/corporate-planter.jpg',
     icon: (

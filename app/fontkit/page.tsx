@@ -20,7 +20,7 @@ const fonts = [
 const sampleTexts = {
   headline: 'Planter Business',
   tagline: 'Your Private Gardener',
-  paragraph: 'Year-round beauty with seasonal refreshes. Professional design, installation, and maintenance included. Transform your outdoor space with our expert planter services.',
+  paragraph: 'Year-round beauty with seasonal refreshes. Professional design, installation, and maintenance avalible. Transform your outdoor space with our expert planter services.',
   cta: 'Get Started Today',
 };
 
@@ -336,7 +336,7 @@ export default function FontKitPage() {
                   style={{ fontFamily: selectedFont.family }}
                 >
                   From spring blooms to winter evergreens, we keep your planters beautiful year-round
-                  with our professional design, installation, and maintenance services.
+                  with our professional design, installation, and maintenance services available.
                 </p>
                 <div className="grid md:grid-cols-3 gap-6">
                   {['Planter Subscriptions', 'Seasonal Decor', 'Maintenance'].map((service) => (

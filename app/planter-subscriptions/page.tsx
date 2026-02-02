@@ -10,7 +10,7 @@ import FinalCTA from '@/components/FinalCTA';
 
 export const metadata = {
   title: 'Planter Subscriptions | Planter Business',
-  description: 'Year-round beauty with seasonal refreshes. Professional design, installation, and maintenance included.',
+  description: 'Year-round beauty with seasonal refreshes. Professional design, installation, and maintenance available.',
 };
 
 export default function PlanterSubscriptionsPage() {
