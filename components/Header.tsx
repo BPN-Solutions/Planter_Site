@@ -21,7 +21,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
       <div className="flex items-center justify-between h-[72px] px-6 lg:px-12 max-w-[1800px] mx-auto">
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center gap-3">
           <Image
             src="/images/logo.png"
             alt="Detroit-Style Planters"
@@ -30,6 +30,9 @@ export default function Header() {
             className="h-[68px] w-auto"
             priority
           />
+          <span className="text-xl lg:text-2xl font-bold text-forest-700">
+            Detroit Style Planter Company
+          </span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
