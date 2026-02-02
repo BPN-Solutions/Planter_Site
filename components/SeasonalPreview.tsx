@@ -100,9 +100,9 @@ export default function SeasonalPreview() {
   };
 
   return (
-    <section ref={sectionRef} className="w-full bg-white">
+    <section ref={sectionRef} className="w-full bg-white snap-start snap-always min-h-screen">
       {/* Title - centered with padding */}
-      <div className="container-padding max-w-[1600px] mx-auto py-16">
+      <div className="container-padding max-w-[1600px] mx-auto pt-16 pb-8">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -114,16 +114,16 @@ export default function SeasonalPreview() {
       </div>
 
       {/* Desktop Layout - 70% images / 30% sidebar (flipped) */}
-      <div className="hidden lg:grid lg:grid-cols-[70%_30%]">
+      <div className="hidden lg:grid lg:grid-cols-[70%_30%] h-[calc(100vh-150px)]">
         {/* Season Cards - each takes full viewport height */}
-        <div>
+        <div className="snap-y snap-mandatory overflow-y-scroll h-full scrollbar-hide">
           {seasons.map((season) => (
             <div
               key={season.id}
               ref={(el) => {
                 seasonRefs.current[season.id] = el;
               }}
-              className="h-[calc(100vh-80px)] scroll-mt-20"
+              className="h-full snap-start snap-always"
             >
               <div className="group block relative h-full overflow-hidden rounded-r-2xl bg-gray-100">
                 <img
@@ -135,17 +135,12 @@ export default function SeasonalPreview() {
 
                 {/* Bottom content with elongated title */}
                 <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-12">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white">
+                  <h3 className="text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-[var(--font-poppins)] font-bold tracking-[0.2em] md:tracking-[0.25em] lg:tracking-[0.3em] uppercase flex items-center gap-4">
+                    <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
                       {season.icon}
                     </div>
-                  </div>
-                  <h3 className="text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-[var(--font-poppins)] font-bold tracking-[0.2em] md:tracking-[0.25em] lg:tracking-[0.3em] uppercase mb-4">
                     {season.label.split('').join(' ')}
                   </h3>
-                  <p className="text-white/90 text-base lg:text-lg max-w-xl">
-                    {season.description}
-                  </p>
                 </div>
               </div>
             </div>
@@ -157,7 +152,7 @@ export default function SeasonalPreview() {
           initial={{ opacity: 0, x: 30 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
           transition={{ duration: 0.7 }}
-          className="sticky top-20 h-[calc(100vh-80px)] flex flex-col justify-center pl-8 pr-8 xl:pr-16 space-y-6"
+          className="sticky top-20 h-full flex flex-col justify-center pl-8 pr-8 xl:pr-16 space-y-6"
         >
           {seasons.map((season) => (
             <button
@@ -215,14 +210,14 @@ export default function SeasonalPreview() {
       </div>
 
       {/* Mobile Full-Screen Cards */}
-      <div className="lg:hidden space-y-0">
+      <div className="lg:hidden">
         {seasons.map((season, index) => (
           <motion.div
             key={season.id}
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="relative h-[calc(100vh-80px)] overflow-hidden group"
+            className="relative h-screen snap-start snap-always overflow-hidden group"
           >
             <div className="block relative w-full h-full">
               <img
@@ -235,19 +230,12 @@ export default function SeasonalPreview() {
 
               {/* Bottom content with elongated title */}
               <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white">
+                <h3 className="text-white text-3xl sm:text-4xl font-[var(--font-poppins)] font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase flex items-center gap-3">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
                     {season.icon}
                   </div>
-                </div>
-
-                <h3 className="text-white text-3xl sm:text-4xl font-[var(--font-poppins)] font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase mb-4">
                   {season.label.split('').join(' ')}
                 </h3>
-
-                <p className="text-white/90 text-base">
-                  {season.description}
-                </p>
               </div>
             </div>
           </motion.div>
