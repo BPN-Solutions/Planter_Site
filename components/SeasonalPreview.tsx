@@ -22,7 +22,7 @@ const seasons = [
   {
     id: 'summer',
     label: 'Summer',
-    description: 'Bold geraniums, petunias, and trailing vines thrive in the warmth.',
+    description: 'Tropical plants and flowers that can tolerate the heat of summer.',
     image: '/images/summer_planter.jpg',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -34,7 +34,7 @@ const seasons = [
   {
     id: 'fall',
     label: 'Fall',
-    description: 'Warm mums, ornamental kale, and autumn foliage set a cozy mood.',
+    description: 'Harvest themed featuring the warm, vibrant colors of the season.',
     image: '/images/fall_planter.jpg',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,7 +46,7 @@ const seasons = [
   {
     id: 'winter',
     label: 'Winter',
-    description: 'Evergreens, berries, and festive accents through the holidays.',
+    description: 'Preserved evergreens, berries, and festive accents to last through the tough winter conditions.',
     image: '/images/winter_planter1.webp',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

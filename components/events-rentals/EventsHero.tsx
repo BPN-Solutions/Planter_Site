@@ -46,7 +46,7 @@ export default function EventsHero() {
               transition={{ duration: 0.7, delay: 0.4 }}
               className="text-white/90 text-xl md:text-2xl mb-8 max-w-2xl"
             >
-              Short-term planter solutions for special events, corporate gatherings, real estate staging, and vacation properties.
+              Short-term planter and seasonal decor solutions for special events, real estate staging, and vacation rentals.
             </motion.p>
 
             <motion.div

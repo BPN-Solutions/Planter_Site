@@ -53,7 +53,7 @@ export default function Hero() {
             className="text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto"
             style={{ textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}
           >
-            Professional seasonal planters, designed and installed for you.
+            Planters and seasonal outdoor décor designed and installed at your home or business to celebrate the beauty of every season.
           </motion.p>
 
           <motion.div

@@ -8,20 +8,36 @@ import Link from 'next/link';
 
 const faqs = [
   {
-    question: 'What is a planter subscription?',
-    answer: 'A planter subscription is a year-round service where we design, install, and maintain your seasonal planters. We refresh them four times per year—spring, summer, fall, and winter—so you always have beautiful, fresh displays without any work.',
+    question: 'How much does it cost?',
+    answer: 'The price of our arrangements is standardized and based on the size of the container. We measure by diameter for planters, and by length for window boxes. Pricing is the same for the entire season.',
   },
   {
-    question: 'What areas do you serve?',
-    answer: 'We serve the greater Detroit metro area including Birmingham, Bloomfield Hills, Grosse Pointe, Royal Oak, Troy, Rochester, West Bloomfield, Farmington Hills, Northville, and Plymouth.',
+    question: 'Can I use my existing planters?',
+    answer: 'Absolutely! Arrangements for existing customer-owned planters are priced based on the container size. We are also available to help you choose new planters and containers. For larger numbers of planters we charge a nominal designer fee.',
   },
   {
-    question: 'Do I need to do any maintenance?',
-    answer: 'No! That\'s the beauty of our service. We handle everything—design, installation, watering, deadheading, and seasonal transitions. You just enjoy the beautiful planters.',
+    question: 'Does everyone get the same arrangement?',
+    answer: 'Each planter is uniquely made for you. Before each delivery we put together a large assortment of plants that are perfectly suited for your growing conditions and make sure nothing looks too similar to those around them.',
   },
   {
-    question: 'How do I get started?',
-    answer: 'Simply request a consultation through our contact form or give us a call. We\'ll schedule a time to visit your property, discuss your preferences, and create a custom plan for your space.',
+    question: 'Can I choose what goes into my container?',
+    answer: 'During your consultation we will document any requests. From there, our subscribers typically give us the challenge to do what we do best, which is put together beautiful seasonal arrangements for your home.',
+  },
+  {
+    question: 'I do not have a green thumb. What happens if I kill it?',
+    answer: 'Don\'t worry about it! We take out all the guesswork. People usually kill plants because they choose the wrong plants for the space or neglect to care for them. We choose plants that are ideal for your growing conditions and provide you with simple care instructions each time we deliver. Still worried? We also offer maintenance packages so all you need to do is water. We take care of pruning, inspect/treat for insects and fungus, and even replace plants that happen to die.',
+  },
+  {
+    question: 'Do you offer a warranty on your plants?',
+    answer: 'All plants are warrantied for 14 days from date of installation at your home or office. For customers who opt for a bi-weekly maintenance plan, plants are replaced in-season at no additional cost.',
+  },
+  {
+    question: 'How do I know when my planter will be delivered or my seasonal plantings will take place?',
+    answer: 'We\'ll contact you at the beginning of each season to confirm when we\'ll be planting in your area and make any changes to your subscription. We will also follow-up with text messages the week before we arrive and when we are on the way!',
+  },
+  {
+    question: 'When or how can I cancel my subscription?',
+    answer: 'We strive for you to love your subscription service, but we realize sometimes a customer may need to cancel. If you need to cancel your plan, please just email us at Info@Dnter.com. Plans can be cancelled at anytime.',
   },
 ];
 

@@ -9,7 +9,7 @@ const services = [
   {
     id: 'planters',
     title: 'Planter Subscriptions',
-    description: 'Year-round beauty with seasonal refreshes. Professional design, installation, and maintenance available.',
+    description: 'Year-round beauty with seasonal refreshes for your home and business. Customized design, installation, and optional maintenance service.',
     href: '/planter-subscriptions',
     image: '/images/corporate-planter.jpg',
     icon: (
@@ -35,7 +35,7 @@ const services = [
   {
     id: 'irrigation',
     title: 'Irrigation',
-    description: 'Professional container plant irrigation setup and maintenance to keep your plants healthy.',
+    description: 'Maximum beauty and plant health without the burden of manual watering.',
     href: '/irrigation',
     image: '/images/irrigation.jpeg',
     icon: (

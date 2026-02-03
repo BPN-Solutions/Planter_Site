@@ -7,45 +7,46 @@ import Link from 'next/link';
 
 const tiers = [
   {
-    id: 'essential',
-    name: 'Essential',
-    tagline: 'Perfect for Front Doors',
+    id: 'basic',
+    name: 'Basic',
+    tagline: 'Essential Beauty',
     features: [
-      '2-4 planters included',
-      '4 seasonal refreshes per year',
-      'Professional design & installation',
-      'Premium plants & materials',
-      'Seasonal removal & storage',
+      'Custom design',
+      'Premium plants and materials',
+      '4 Seasonal refreshes',
+      'Clean-up and removal of all debris',
     ],
     popular: false,
   },
   {
-    id: 'premium',
-    name: 'Premium',
-    tagline: 'Complete Curb Appeal',
+    id: 'enhanced',
+    name: 'Enhanced',
+    tagline: 'Full-Service Care',
     features: [
-      '5-8 planters included',
-      '4 seasonal refreshes per year',
-      'Professional design & installation',
-      'Premium plants & materials',
-      'Seasonal removal & storage',
-      'Priority scheduling',
+      'Everything in Basic plan',
+      'Bi-weekly Maintenance (May-Oct)',
+      'Deep Water: Thorough root soaking for all plants',
+      'Fertilize: Water-soluble fertilizer for beautiful blooms',
+      'Dead Head: Remove dead flowers to encourage blooming',
+      'Prune: Remove stray/wilting branches for balanced growth',
+      'Spray for Insects (organic): Examination and treatment',
+      'Spray for Disease (organic): Preventative fungus treatment',
+      'Replacement of Plants (as appropriate)',
     ],
     popular: true,
   },
   {
-    id: 'estate',
-    name: 'Estate',
-    tagline: 'Full Property Coverage',
+    id: 'ultimate',
+    name: 'Ultimate',
+    tagline: 'Complete Package',
     features: [
-      '9+ planters included',
-      '4 seasonal refreshes per year',
-      'Professional design & installation',
-      'Premium plants & materials',
-      'Seasonal removal & storage',
-      'Priority scheduling',
-      'Dedicated account manager',
-      'Custom design consultation',
+      'Everything in Enhanced plan',
+      'Irrigation System Included:',
+      '   • Custom designed and professionally installed',
+      '   • Adjustable drip system for each planter',
+      '   • Stand-alone or connected to existing system',
+      '   • Programmable daily schedule with seasonal adjustments',
+      'Seasonal Decor: Professional holiday and seasonal decorations',
     ],
     popular: false,
   },
@@ -66,7 +67,7 @@ export default function SubscriptionTiers() {
         >
           <h2 className="text-forest-900 mb-4">Choose Your Subscription</h2>
           <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
-            All tiers include everything you need for year-round beauty. No maintenance required.
+            Select the plan that best fits your needs for year-round beauty.
           </p>
         </motion.div>
 

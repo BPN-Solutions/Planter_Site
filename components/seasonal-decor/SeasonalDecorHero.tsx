@@ -28,7 +28,7 @@ export default function SeasonalDecorHero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="inline-block px-4 py-2 bg-earth-600/20 backdrop-blur-sm rounded-full mb-6"
             >
-              <span className="text-white font-medium text-sm">Special Occasions</span>
+              <span className="text-white font-medium text-sm">Professional Installations</span>
             </motion.div>
 
             <motion.h1
@@ -46,7 +46,7 @@ export default function SeasonalDecorHero() {
               transition={{ duration: 0.7, delay: 0.4 }}
               className="text-white/90 text-xl md:text-2xl mb-8 max-w-2xl"
             >
-              Make every occasion memorable with professional planter styling for holidays, celebrations, and special events.
+              Make every season memorable with professional installed decor for holidays, seasons, and special events at your home or business.
             </motion.p>
 
             <motion.div

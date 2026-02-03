@@ -46,7 +46,7 @@ export default function PlanterHero() {
               transition={{ duration: 0.7, delay: 0.4 }}
               className="text-white/90 text-xl md:text-2xl mb-8 max-w-2xl"
             >
-              Year-round beauty with seasonal refreshes. We design, install, and maintain stunning planters that transform with the seasons.
+              Year-round beauty with seasonal refreshes for your home and business. Customized design, installation, and optional maintenance service.
             </motion.p>
 
             <motion.div
