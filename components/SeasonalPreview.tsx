@@ -96,7 +96,7 @@ export default function SeasonalPreview() {
           transition={{ duration: 0.6 }}
           className="text-center text-forest-900"
         >
-          Always in Season
+          Always In Season
         </motion.h2>
       </div>
 
