@@ -7,13 +7,13 @@ export default function Footer() {
       <div className="container-padding section-spacing max-w-[1600px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
-            <Link href="/" className="inline-block mb-4 p-4 bg-white rounded-lg">
+            <Link href="/" className="inline-block mb-4 p-3 sm:p-4 bg-white rounded-lg">
               <Image
                 src="/images/logo.png"
                 alt="Detroit-Style Planters"
                 width={180}
                 height={180}
-                className="h-[180px] w-auto"
+                className="h-[100px] sm:h-[140px] md:h-[180px] w-auto"
               />
             </Link>
             <p className="text-gray-400">Your Private Gardener</p>

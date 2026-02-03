@@ -57,7 +57,7 @@ export default function FAQPreview() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
-          className="text-center text-forest-900 mb-16"
+          className="text-center text-forest-900 mb-16 text-3xl sm:text-4xl md:text-5xl leading-tight break-words hyphens-none"
         >
           Common Questions
         </motion.h2>
@@ -77,7 +77,7 @@ export default function FAQPreview() {
                 onClick={() => toggleFAQ(index)}
                 className="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors"
               >
-                <span className="text-lg font-semibold text-gray-900 pr-4">
+                <span className="text-base sm:text-lg font-semibold text-gray-900 pr-4 leading-snug break-words hyphens-none">
                   {faq.question}
                 </span>
                 <svg

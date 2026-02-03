@@ -94,7 +94,7 @@ export default function SeasonalPreview() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
-          className="text-center text-forest-900"
+          className="text-center text-forest-900 text-3xl sm:text-4xl md:text-5xl leading-tight break-words hyphens-none"
         >
           Always In Season
         </motion.h2>
@@ -125,7 +125,7 @@ export default function SeasonalPreview() {
 
                 {/* Bottom content with elongated title */}
                 <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-12">
-                  <h3 className="text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-[var(--font-poppins)] font-bold tracking-[0.2em] md:tracking-[0.25em] lg:tracking-[0.3em] uppercase flex items-center gap-4">
+                  <h3 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-[var(--font-poppins)] font-bold tracking-[0.15em] sm:tracking-[0.2em] md:tracking-[0.25em] lg:tracking-[0.3em] uppercase flex items-center gap-4 leading-tight break-words">
                     <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
                       {season.iconSrc && (
                         <Image
@@ -226,20 +226,22 @@ export default function SeasonalPreview() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="relative h-screen snap-start snap-always overflow-hidden group"
+            className="relative min-h-screen h-screen snap-start snap-always overflow-hidden group bg-gray-900"
+            style={{ minHeight: '100svh', height: '100svh' }}
           >
             <div className="block relative w-full h-full">
               <img
                 src={season.image}
                 alt={`${season.label} planter arrangement`}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-active:scale-105"
+                className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105 group-active:scale-105"
+                style={{ height: '100%', width: '100%' }}
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
               {/* Bottom content with elongated title */}
               <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-                <h3 className="text-white text-3xl sm:text-4xl font-[var(--font-poppins)] font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase flex items-center gap-3">
+                <h3 className="text-white text-2xl sm:text-3xl md:text-4xl font-[var(--font-poppins)] font-bold tracking-[0.12em] sm:tracking-[0.15em] md:tracking-[0.2em] uppercase flex items-center gap-3 leading-tight break-words">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
                     {season.iconSrc && (
                       <Image

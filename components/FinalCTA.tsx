@@ -39,7 +39,7 @@ export default function FinalCTA() {
         transition={{ duration: 0.7 }}
         className="relative z-10 container-padding max-w-[800px] mx-auto"
       >
-        <h2 className="text-center text-white mb-12">
+        <h2 className="text-center text-white mb-12 text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight break-words hyphens-none">
           Ready to Transform Your Outdoor Space?
         </h2>
 
@@ -114,11 +114,11 @@ export default function FinalCTA() {
           </button>
         </form>
 
-        <p className="text-center text-white/90 mt-8 text-lg">
+        <p className="text-center text-white/90 mt-8 text-base sm:text-lg leading-relaxed break-words">
           Or call us:{' '}
           <a
             href="tel:+12485550123"
-            className="font-semibold hover:text-forest-300 transition-colors"
+            className="font-semibold hover:text-forest-300 transition-colors whitespace-nowrap"
           >
             (248) 555-0123
           </a>

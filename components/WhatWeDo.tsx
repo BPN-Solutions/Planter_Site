@@ -139,7 +139,7 @@ export default function WhatWeDo() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
-          className="text-center text-forest-900"
+          className="text-center text-forest-900 text-3xl sm:text-4xl md:text-5xl leading-tight break-words hyphens-none"
         >
           What We Do
         </motion.h2>
@@ -191,7 +191,7 @@ export default function WhatWeDo() {
                 </div>
                 <div className="flex-1">
                   <h3
-                    className={`font-[var(--font-poppins)] transition-all duration-300 ${
+                    className={`font-[var(--font-poppins)] transition-all duration-300 leading-tight break-words hyphens-none ${
                       activeService === service.id
                         ? 'text-2xl xl:text-3xl font-bold text-forest-900 mb-2'
                         : 'text-xl font-semibold text-gray-600 mb-0'
@@ -260,7 +260,7 @@ export default function WhatWeDo() {
                 </div>
 
                 <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-12">
-                  <h3 className="text-white group-hover:text-white/80 transition-colors duration-300 text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-[var(--font-poppins)] font-bold tracking-[0.15em] md:tracking-[0.2em] lg:tracking-[0.25em] uppercase flex items-center gap-4">
+                  <h3 className="text-white group-hover:text-white/80 transition-colors duration-300 text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-[var(--font-poppins)] font-bold tracking-[0.15em] md:tracking-[0.2em] lg:tracking-[0.25em] uppercase flex items-center gap-4 leading-tight break-words hyphens-none">
                     <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
                       {service.iconSrc ? (
                         <Image
@@ -294,13 +294,15 @@ export default function WhatWeDo() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="relative h-screen snap-start snap-always overflow-hidden"
+            className="relative min-h-screen h-screen snap-start snap-always overflow-hidden bg-gray-900"
+            style={{ minHeight: '100svh', height: '100svh' }}
           >
             <Link href={service.href} className="group block relative w-full h-full">
               <img
                 src={service.image}
                 alt={service.title}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-active:scale-105"
+                className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105 group-active:scale-105"
+                style={{ height: '100%', width: '100%' }}
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
@@ -315,7 +317,7 @@ export default function WhatWeDo() {
               </div>
 
               <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-                <h3 className="text-white group-hover:text-white/80 group-active:text-white/80 transition-colors duration-300 text-xl sm:text-2xl font-[var(--font-poppins)] font-bold tracking-[0.1em] sm:tracking-[0.12em] uppercase flex items-center gap-3">
+                <h3 className="text-white group-hover:text-white/80 group-active:text-white/80 transition-colors duration-300 text-xl sm:text-2xl font-[var(--font-poppins)] font-bold tracking-[0.1em] sm:tracking-[0.12em] uppercase flex items-center gap-3 leading-tight break-words hyphens-none">
                   <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
                     {service.iconSrc ? (
                       <Image

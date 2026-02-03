@@ -25,10 +25,10 @@ export default function VideoSection({ videoId, title, subtitle }: VideoSectionP
           className="text-center mb-10 md:mb-14 px-6"
         >
           {title && (
-            <h2 className="text-white mb-4">{title}</h2>
+            <h2 className="text-white mb-4 text-3xl sm:text-4xl md:text-5xl leading-tight break-words hyphens-none">{title}</h2>
           )}
           {subtitle && (
-            <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto">
+            <p className="text-white/80 text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed break-words">
               {subtitle}
             </p>
           )}

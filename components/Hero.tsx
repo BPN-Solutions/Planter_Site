@@ -40,7 +40,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-white mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-4 leading-tight break-words hyphens-none"
             style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5), 0 4px 40px rgba(0,0,0,0.3)' }}
           >
             Your Private Gardener
@@ -50,7 +50,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto"
+            className="text-base sm:text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto leading-relaxed break-words"
             style={{ textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}
           >
             Planters and seasonal outdoor décor designed and installed at your home or business to celebrate the beauty of every season.
@@ -60,17 +60,17 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center w-full max-w-lg sm:max-w-none mx-auto"
           >
             <Link
               href="#how-it-works"
-              className="px-8 py-3.5 bg-white/15 backdrop-blur-md border border-white/40 text-white font-medium rounded-md hover:bg-white/25 transition-all text-center shadow-lg"
+              className="px-6 sm:px-8 py-3 sm:py-3.5 bg-white/15 backdrop-blur-md border border-white/40 text-white text-sm sm:text-base font-medium rounded-md hover:bg-white/25 transition-all text-center shadow-lg whitespace-nowrap"
             >
               See How It Works
             </Link>
             <Link
               href="#contact"
-              className="px-8 py-3.5 bg-white text-forest-800 font-semibold rounded-md hover:bg-cream-100 transition-colors text-center shadow-lg"
+              className="px-6 sm:px-8 py-3 sm:py-3.5 bg-white text-forest-800 text-sm sm:text-base font-semibold rounded-md hover:bg-cream-100 transition-colors text-center shadow-lg whitespace-nowrap"
             >
               Request a Consultation
             </Link>

@@ -62,34 +62,81 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
 }
 
+/* Base mobile styles (optimized for small screens 320px+) */
 h1 {
-  font-size: 2.25rem;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-h2 {
   font-size: 1.875rem;
   font-weight: 700;
   line-height: 1.2;
 }
 
-h3 {
+h2 {
   font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.3;
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 600;
 }
 
 p {
-  font-size: 1rem;
-  line-height: 1.75;
+  font-size: 0.9375rem;
+  line-height: 1.7;
 }
 
+/* Prevent awkward word breaking globally */
+h1, h2, h3, h4, h5, h6, p, span, a {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: none;
+}
+
+/* Ensure images are responsive by default */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Small phones and up (375px+) */
+@media (min-width: 375px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  h3 {
+    font-size: 1.375rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* Larger phones and small tablets (640px+) */
+@media (min-width: 640px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+  h2 {
+    font-size: 1.875rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Tablets (768px+) */
 @media (min-width: 768px) {
   h1 {
     font-size: 3rem;

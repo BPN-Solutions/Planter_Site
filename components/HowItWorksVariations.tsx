@@ -40,10 +40,10 @@ function Option1() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900 leading-tight break-words hyphens-none">
             WE MAKE IT EASY
           </h2>
-          <p className="text-sm text-gray-500 uppercase tracking-wider">Option 1: Base 7 (Control) - White Background</p>
+          <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider break-words">Option 1: Base 7 (Control) - White Background</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -69,7 +69,7 @@ function Option1() {
               <div className={`absolute inset-0 bg-gradient-to-b from-black/30 to-black/50 transition-opacity duration-500 ${hoveredIndex === index ? 'opacity-0' : 'opacity-100'}`}>
                 <div className="h-full flex flex-col items-center justify-center text-center px-8">
                   <div className="text-7xl font-bold text-white/30 mb-4">{step.number}</div>
-                  <h3 className="text-2xl font-semibold text-white tracking-wide uppercase">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-wide uppercase leading-tight break-words hyphens-none">
                     {step.title}
                   </h3>
                 </div>
@@ -79,10 +79,10 @@ function Option1() {
               <div className={`absolute inset-0 bg-gradient-to-b from-forest-900/95 to-forest-900/98 transition-opacity duration-500 ${hoveredIndex === index ? 'opacity-100' : 'opacity-0'}`}>
                 <div className="h-full flex flex-col items-center justify-center text-center px-8">
                   <div className="text-5xl font-bold text-white/20 mb-4">{step.number}</div>
-                  <h3 className="text-xl font-semibold text-white mb-4 tracking-wide uppercase">
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-4 tracking-wide uppercase leading-tight break-words hyphens-none">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-white/95 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-white/95 leading-relaxed break-words">
                     {step.description}
                   </p>
                 </div>
@@ -110,10 +110,10 @@ function Option2() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900 leading-tight break-words hyphens-none">
             WE MAKE IT EASY
           </h2>
-          <p className="text-sm text-gray-500 uppercase tracking-wider">Option 2: Lowered Text on Hover</p>
+          <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider break-words">Option 2: Lowered Text on Hover</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -139,7 +139,7 @@ function Option2() {
               <div className={`absolute inset-0 bg-gradient-to-b from-black/30 to-black/50 transition-opacity duration-500 ${hoveredIndex === index ? 'opacity-0' : 'opacity-100'}`}>
                 <div className="h-full flex flex-col items-center justify-center text-center px-8">
                   <div className="text-7xl font-bold text-white/30 mb-4">{step.number}</div>
-                  <h3 className="text-2xl font-semibold text-white tracking-wide uppercase">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-wide uppercase leading-tight break-words hyphens-none">
                     {step.title}
                   </h3>
                 </div>
@@ -149,10 +149,10 @@ function Option2() {
               <div className={`absolute inset-0 bg-gradient-to-b from-forest-900/95 to-forest-900/98 transition-opacity duration-500 ${hoveredIndex === index ? 'opacity-100' : 'opacity-0'}`}>
                 <div className="h-full flex flex-col justify-end pb-12 text-center px-8" style={{ paddingTop: '65%' }}>
                   <div className="text-5xl font-bold text-white/20 mb-4">{step.number}</div>
-                  <h3 className="text-xl font-semibold text-white mb-4 tracking-wide uppercase">
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-4 tracking-wide uppercase leading-tight break-words hyphens-none">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-white/95 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-white/95 leading-relaxed break-words">
                     {step.description}
                   </p>
                 </div>
@@ -180,10 +180,10 @@ function Option3() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900 leading-tight break-words hyphens-none">
             WE MAKE IT EASY
           </h2>
-          <p className="text-sm text-gray-500 uppercase tracking-wider">Option 3: Bigger Title + Lowered Text</p>
+          <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider break-words">Option 3: Bigger Title + Lowered Text</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -209,7 +209,7 @@ function Option3() {
               <div className={`absolute inset-0 bg-gradient-to-b from-black/30 to-black/50 transition-opacity duration-500 ${hoveredIndex === index ? 'opacity-0' : 'opacity-100'}`}>
                 <div className="h-full flex flex-col items-center justify-center text-center px-8">
                   <div className="text-7xl font-bold text-white/30 mb-4">{step.number}</div>
-                  <h3 className="text-2xl font-semibold text-white tracking-wide uppercase">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-wide uppercase leading-tight break-words hyphens-none">
                     {step.title}
                   </h3>
                 </div>
@@ -219,10 +219,10 @@ function Option3() {
               <div className={`absolute inset-0 bg-gradient-to-b from-forest-900/95 to-forest-900/98 transition-opacity duration-500 ${hoveredIndex === index ? 'opacity-100' : 'opacity-0'}`}>
                 <div className="h-full flex flex-col justify-end pb-12 text-center px-6" style={{ paddingTop: '60%' }}>
                   <div className="text-4xl font-bold text-white/20 mb-3">{step.number}</div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 tracking-wide uppercase leading-tight">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 tracking-wide uppercase leading-tight break-words hyphens-none">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-white/95 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-white/95 leading-relaxed break-words">
                     {step.description}
                   </p>
                 </div>
@@ -250,10 +250,10 @@ function Option4() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900 leading-tight break-words hyphens-none">
             WE MAKE IT EASY
           </h2>
-          <p className="text-sm text-gray-500 uppercase tracking-wider">Option 4: Brighter Watermark Numbers</p>
+          <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider break-words">Option 4: Brighter Watermark Numbers</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -279,7 +279,7 @@ function Option4() {
               <div className={`absolute inset-0 bg-gradient-to-b from-black/30 to-black/50 transition-opacity duration-500 ${hoveredIndex === index ? 'opacity-0' : 'opacity-100'}`}>
                 <div className="h-full flex flex-col items-center justify-center text-center px-8">
                   <div className="text-7xl font-bold text-white/50 mb-4">{step.number}</div>
-                  <h3 className="text-2xl font-semibold text-white tracking-wide uppercase">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-wide uppercase leading-tight break-words hyphens-none">
                     {step.title}
                   </h3>
                 </div>
@@ -289,10 +289,10 @@ function Option4() {
               <div className={`absolute inset-0 bg-gradient-to-b from-forest-900/95 to-forest-900/98 transition-opacity duration-500 ${hoveredIndex === index ? 'opacity-100' : 'opacity-0'}`}>
                 <div className="h-full flex flex-col items-center justify-center text-center px-8">
                   <div className="text-5xl font-bold text-white/40 mb-4">{step.number}</div>
-                  <h3 className="text-xl font-semibold text-white mb-4 tracking-wide uppercase">
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-4 tracking-wide uppercase leading-tight break-words hyphens-none">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-white/95 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-white/95 leading-relaxed break-words">
                     {step.description}
                   </p>
                 </div>
@@ -320,10 +320,10 @@ function Option5() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900 leading-tight break-words hyphens-none">
             WE MAKE IT EASY
           </h2>
-          <p className="text-sm text-gray-500 uppercase tracking-wider">Option 5: Numbers Only in Text</p>
+          <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider break-words">Option 5: Numbers Only in Text</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -348,7 +348,7 @@ function Option5() {
               {/* Default state - no numbers, just title */}
               <div className={`absolute inset-0 bg-gradient-to-b from-black/30 to-black/50 transition-opacity duration-500 ${hoveredIndex === index ? 'opacity-0' : 'opacity-100'}`}>
                 <div className="h-full flex flex-col items-center justify-center text-center px-8">
-                  <h3 className="text-2xl font-semibold text-white tracking-wide uppercase">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-wide uppercase leading-tight break-words hyphens-none">
                     {step.title}
                   </h3>
                 </div>
@@ -357,10 +357,10 @@ function Option5() {
               {/* Hover state - numbers in the text */}
               <div className={`absolute inset-0 bg-gradient-to-b from-forest-900/95 to-forest-900/98 transition-opacity duration-500 ${hoveredIndex === index ? 'opacity-100' : 'opacity-0'}`}>
                 <div className="h-full flex flex-col items-center justify-center text-center px-8">
-                  <h3 className="text-xl font-semibold text-white mb-4 tracking-wide uppercase">
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-4 tracking-wide uppercase leading-tight break-words hyphens-none">
                     {step.number}. {step.title}
                   </h3>
-                  <p className="text-sm text-white/95 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-white/95 leading-relaxed break-words">
                     {step.description}
                   </p>
                 </div>
@@ -388,10 +388,10 @@ function Option6() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900 leading-tight break-words hyphens-none">
             WE MAKE IT EASY
           </h2>
-          <p className="text-sm text-gray-500 uppercase tracking-wider">Option 6: Bubble Number Badges</p>
+          <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider break-words">Option 6: Bubble Number Badges</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -416,7 +416,7 @@ function Option6() {
               {/* Default state - no numbers, just title */}
               <div className={`absolute inset-0 bg-gradient-to-b from-black/30 to-black/50 transition-opacity duration-500 ${hoveredIndex === index ? 'opacity-0' : 'opacity-100'}`}>
                 <div className="h-full flex flex-col items-center justify-center text-center px-8">
-                  <h3 className="text-2xl font-semibold text-white tracking-wide uppercase">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-wide uppercase leading-tight break-words hyphens-none">
                     {step.title}
                   </h3>
                 </div>
@@ -428,10 +428,10 @@ function Option6() {
                   <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-4 shadow-lg">
                     <span className="text-2xl font-bold text-forest-700">{step.number}</span>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-4 tracking-wide uppercase">
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-4 tracking-wide uppercase leading-tight break-words hyphens-none">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-white/95 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-white/95 leading-relaxed break-words">
                     {step.description}
                   </p>
                 </div>
@@ -459,10 +459,10 @@ function Option7A() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900 leading-tight break-words hyphens-none">
             WE MAKE IT EASY
           </h2>
-          <p className="text-sm text-gray-500 uppercase tracking-wider">Option 7A: White Background (Lowered Text)</p>
+          <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider break-words">Option 7A: White Background (Lowered Text)</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -487,7 +487,7 @@ function Option7A() {
               <div className={`absolute inset-0 bg-gradient-to-b from-black/30 to-black/50 transition-opacity duration-500 ${hoveredIndex === index ? 'opacity-0' : 'opacity-100'}`}>
                 <div className="h-full flex flex-col items-center justify-center text-center px-8">
                   <div className="text-7xl font-bold text-white/30 mb-4">{step.number}</div>
-                  <h3 className="text-2xl font-semibold text-white tracking-wide uppercase">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-wide uppercase leading-tight break-words hyphens-none">
                     {step.title}
                   </h3>
                 </div>
@@ -496,10 +496,10 @@ function Option7A() {
               <div className={`absolute inset-0 bg-gradient-to-b from-forest-900/95 to-forest-900/98 transition-opacity duration-500 ${hoveredIndex === index ? 'opacity-100' : 'opacity-0'}`}>
                 <div className="h-full flex flex-col justify-end pb-12 text-center px-8" style={{ paddingTop: '65%' }}>
                   <div className="text-5xl font-bold text-white/20 mb-4">{step.number}</div>
-                  <h3 className="text-xl font-semibold text-white mb-4 tracking-wide uppercase">
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-4 tracking-wide uppercase leading-tight break-words hyphens-none">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-white/95 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-white/95 leading-relaxed break-words">
                     {step.description}
                   </p>
                 </div>
@@ -527,10 +527,10 @@ function Option7B() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900 leading-tight break-words hyphens-none">
             WE MAKE IT EASY
           </h2>
-          <p className="text-sm text-gray-600 uppercase tracking-wider">Option 7B: Soft Green Background (Lowered Text)</p>
+          <p className="text-xs sm:text-sm text-gray-600 uppercase tracking-wider break-words">Option 7B: Soft Green Background (Lowered Text)</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -555,7 +555,7 @@ function Option7B() {
               <div className={`absolute inset-0 bg-gradient-to-b from-black/30 to-black/50 transition-opacity duration-500 ${hoveredIndex === index ? 'opacity-0' : 'opacity-100'}`}>
                 <div className="h-full flex flex-col items-center justify-center text-center px-8">
                   <div className="text-7xl font-bold text-white/30 mb-4">{step.number}</div>
-                  <h3 className="text-2xl font-semibold text-white tracking-wide uppercase">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-wide uppercase leading-tight break-words hyphens-none">
                     {step.title}
                   </h3>
                 </div>
@@ -564,10 +564,10 @@ function Option7B() {
               <div className={`absolute inset-0 bg-gradient-to-b from-forest-900/95 to-forest-900/98 transition-opacity duration-500 ${hoveredIndex === index ? 'opacity-100' : 'opacity-0'}`}>
                 <div className="h-full flex flex-col justify-end pb-12 text-center px-8" style={{ paddingTop: '65%' }}>
                   <div className="text-5xl font-bold text-white/20 mb-4">{step.number}</div>
-                  <h3 className="text-xl font-semibold text-white mb-4 tracking-wide uppercase">
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-4 tracking-wide uppercase leading-tight break-words hyphens-none">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-white/95 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-white/95 leading-relaxed break-words">
                     {step.description}
                   </p>
                 </div>
@@ -595,10 +595,10 @@ function Option8A() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900 leading-tight break-words hyphens-none">
             WE MAKE IT EASY
           </h2>
-          <p className="text-sm text-gray-500 uppercase tracking-wider">Option 8A: Vertical Layout (3-Across Grid)</p>
+          <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider break-words">Option 8A: Vertical Layout (3-Across Grid)</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -623,7 +623,7 @@ function Option8A() {
               <div className={`absolute inset-0 bg-gradient-to-b from-black/30 to-black/50 transition-opacity duration-500 ${hoveredIndex === index ? 'opacity-0' : 'opacity-100'}`}>
                 <div className="h-full flex flex-col items-center justify-center text-center px-8">
                   <div className="text-7xl font-bold text-white/30 mb-4">{step.number}</div>
-                  <h3 className="text-2xl font-semibold text-white tracking-wide uppercase">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-wide uppercase leading-tight break-words hyphens-none">
                     {step.title}
                   </h3>
                 </div>
@@ -632,10 +632,10 @@ function Option8A() {
               <div className={`absolute inset-0 bg-gradient-to-b from-forest-900/95 to-forest-900/98 transition-opacity duration-500 ${hoveredIndex === index ? 'opacity-100' : 'opacity-0'}`}>
                 <div className="h-full flex flex-col justify-end pb-12 text-center px-8" style={{ paddingTop: '65%' }}>
                   <div className="text-5xl font-bold text-white/20 mb-4">{step.number}</div>
-                  <h3 className="text-xl font-semibold text-white mb-4 tracking-wide uppercase">
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-4 tracking-wide uppercase leading-tight break-words hyphens-none">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-white/95 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-white/95 leading-relaxed break-words">
                     {step.description}
                   </p>
                 </div>
@@ -663,10 +663,10 @@ function Option8B() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900 leading-tight break-words hyphens-none">
             WE MAKE IT EASY
           </h2>
-          <p className="text-sm text-gray-500 uppercase tracking-wider">Option 8B: Horizontal Layout with Hover</p>
+          <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider break-words">Option 8B: Horizontal Layout with Hover</p>
         </motion.div>
 
         <div className="space-y-6">
@@ -699,13 +699,13 @@ function Option8B() {
               {/* Text section - Default: just title */}
               <div className={`relative bg-white p-8 flex items-center transition-all duration-500 ${hoveredIndex === index ? 'bg-forest-900' : 'bg-gray-50'}`}>
                 <div>
-                  <h3 className={`text-2xl font-semibold mb-0 transition-all duration-500 ${hoveredIndex === index ? 'text-white mb-4' : 'text-gray-900'}`}>
+                  <h3 className={`text-xl sm:text-2xl font-semibold mb-0 transition-all duration-500 leading-tight break-words hyphens-none ${hoveredIndex === index ? 'text-white mb-4' : 'text-gray-900'}`}>
                     {step.title}
                   </h3>
 
                   {/* Description appears on hover */}
                   <div className={`overflow-hidden transition-all duration-500 ${hoveredIndex === index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
-                    <p className="text-sm text-white/95 leading-relaxed mt-2">
+                    <p className="text-xs sm:text-sm text-white/95 leading-relaxed mt-2 break-words">
                       {step.description}
                     </p>
                   </div>
@@ -734,10 +734,10 @@ function Option9() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900 leading-tight break-words hyphens-none">
             WE MAKE IT EASY
           </h2>
-          <p className="text-sm text-gray-500 uppercase tracking-wider">Option 9: Static Title with Pop-up Description - White</p>
+          <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider break-words">Option 9: Static Title with Pop-up Description - White</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -768,7 +768,7 @@ function Option9() {
                   </div>
 
                   {/* Title - stays in same position */}
-                  <h3 className="text-2xl font-semibold text-white tracking-wide uppercase">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-wide uppercase leading-tight break-words hyphens-none">
                     {step.title}
                   </h3>
 
@@ -803,10 +803,10 @@ function Option10() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 tracking-tight text-white leading-tight break-words hyphens-none">
             WE MAKE IT EASY
           </h2>
-          <p className="text-sm text-white/70 uppercase tracking-wider">Option 10: Static Title with Pop-up Description - Green</p>
+          <p className="text-xs sm:text-sm text-white/70 uppercase tracking-wider break-words">Option 10: Static Title with Pop-up Description - Green</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -837,13 +837,13 @@ function Option10() {
                   </div>
 
                   {/* Title - stays in same position */}
-                  <h3 className={`text-2xl font-semibold tracking-wide uppercase transition-colors duration-500 ${hoveredIndex === index ? 'text-forest-900' : 'text-white'}`}>
+                  <h3 className={`text-xl sm:text-2xl font-semibold tracking-wide uppercase transition-colors duration-500 leading-tight break-words hyphens-none ${hoveredIndex === index ? 'text-forest-900' : 'text-white'}`}>
                     {step.title}
                   </h3>
 
                   {/* Description - pops up on hover */}
                   <div className={`overflow-hidden transition-all duration-500 ${hoveredIndex === index ? 'max-h-32 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
-                    <p className="text-sm text-forest-900/90 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-forest-900/90 leading-relaxed break-words">
                       {step.description}
                     </p>
                   </div>

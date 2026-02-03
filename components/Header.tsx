@@ -24,12 +24,12 @@ export default function Header() {
           <Image
             src="/images/logo.png"
             alt="Detroit-Style Planters"
-            width={80}
-            height={80}
-            className="h-[68px] w-auto"
+            width={60}
+            height={60}
+            className="h-[48px] w-[48px] object-contain flex-shrink-0"
             priority
           />
-          <span className="text-xl lg:text-2xl font-bold text-forest-700">
+          <span className="hidden xl:inline text-xl 2xl:text-2xl font-bold text-forest-700 whitespace-nowrap">
             DETROIT STYLE PLANTER COMPANY
           </span>
         </Link>

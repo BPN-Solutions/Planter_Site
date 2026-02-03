@@ -42,7 +42,7 @@ export default function Chatbot() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 max-w-[calc(100vw-2rem)] sm:max-w-none">
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -50,7 +50,7 @@ export default function Chatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="mb-4 w-[360px] bg-white rounded-lg shadow-2xl overflow-hidden"
+            className="mb-4 w-[calc(100vw-2rem)] sm:w-[360px] max-w-[360px] bg-white rounded-lg shadow-2xl overflow-hidden"
           >
             <div className="bg-forest-600 text-white p-4 flex justify-between items-center">
               <span className="font-semibold">Chat with us</span>
@@ -65,7 +65,7 @@ export default function Chatbot() {
               </button>
             </div>
 
-            <div className="h-[400px] flex flex-col">
+            <div className="h-[70vh] max-h-[500px] sm:h-[400px] flex flex-col">
               <div className="flex-1 p-4 overflow-y-auto space-y-3">
                 {messages.map((msg, index) => (
                   <div
