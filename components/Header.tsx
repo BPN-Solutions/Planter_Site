@@ -30,7 +30,7 @@ export default function Header() {
             priority
           />
           <span className="text-xl lg:text-2xl font-bold text-forest-700">
-            Detroit Style Planter Company
+            DETROIT STYLE PLANTER COMPANY
           </span>
         </Link>
 
