@@ -580,76 +580,8 @@ function Option7B() {
   );
 }
 
-// Option 8A: Vertical Layout (3-across grid)
-function Option8A() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-80px' });
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
-  return (
-    <section ref={ref} className="w-full py-16 md:py-20 bg-white border-t-2 border-gray-200">
-      <div className="container-padding max-w-[1400px] mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900">
-            WE MAKE IT EASY
-          </h2>
-          <p className="text-sm text-gray-500 uppercase tracking-wider">Option 8A: Vertical Layout (3-Across Grid)</p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          {steps.map((step, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="group relative overflow-hidden rounded-lg aspect-[3/4] cursor-pointer"
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-            >
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                style={{
-                  backgroundImage: `url(${step.image})`,
-                  backgroundColor: '#e5e7eb',
-                }}
-              />
-
-              <div className={`absolute inset-0 bg-gradient-to-b from-black/30 to-black/50 transition-opacity duration-500 ${hoveredIndex === index ? 'opacity-0' : 'opacity-100'}`}>
-                <div className="h-full flex flex-col items-center justify-center text-center px-8">
-                  <div className="text-7xl font-bold text-white/30 mb-4">{step.number}</div>
-                  <h3 className="text-2xl font-semibold text-white tracking-wide uppercase">
-                    {step.title}
-                  </h3>
-                </div>
-              </div>
-
-              <div className={`absolute inset-0 bg-gradient-to-b from-forest-900/95 to-forest-900/98 transition-opacity duration-500 ${hoveredIndex === index ? 'opacity-100' : 'opacity-0'}`}>
-                <div className="h-full flex flex-col justify-end pb-12 text-center px-8" style={{ paddingTop: '65%' }}>
-                  <div className="text-5xl font-bold text-white/20 mb-4">{step.number}</div>
-                  <h3 className="text-xl font-semibold text-white mb-4 tracking-wide uppercase">
-                    {step.title}
-                  </h3>
-                  <p className="text-sm text-white/95 leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// Option 8B: Horizontal Layout
-function Option8B() {
+// Option 8: Horizontal Layout
+function Option8() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -666,7 +598,7 @@ function Option8B() {
           <h2 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900">
             WE MAKE IT EASY
           </h2>
-          <p className="text-sm text-gray-500 uppercase tracking-wider">Option 8B: Horizontal Layout with Hover</p>
+          <p className="text-sm text-gray-500 uppercase tracking-wider">Option 8: Horizontal Layout with Hover</p>
         </motion.div>
 
         <div className="space-y-6">
@@ -719,8 +651,8 @@ function Option8B() {
   );
 }
 
-// Main component that renders all 10 variations (8 options, with 7 and 8 having A/B versions)
-export default function HowItWorksVariations() {
+// Main component that renders all 8 variations
+export default function HowItWorksOption7Variations() {
   return (
     <>
       <Option1 />
@@ -731,8 +663,7 @@ export default function HowItWorksVariations() {
       <Option6 />
       <Option7A />
       <Option7B />
-      <Option8A />
-      <Option8B />
+      <Option8 />
     </>
   );
 }
