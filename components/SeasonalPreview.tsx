@@ -169,22 +169,18 @@ export default function SeasonalPreview() {
                   }`}
                 >
                   <div className={activeSeason === season.id ? 'scale-110' : ''}>
-                    {season.iconSrc ? (
-                      <Image
-                        src={season.iconSrc}
-                        alt={season.label}
-                        width={32}
-                        height={32}
-                        className={`w-8 h-8 transition-all duration-300 ${
-                          activeSeason === season.id
-                            ? 'brightness-0 invert'
-                            : ''
-                        }`}
-                        style={activeSeason === season.id ? {} : { filter: 'invert(35%) sepia(18%) saturate(1000%) hue-rotate(109deg) brightness(95%) contrast(92%)' }}
-                      />
-                    ) : (
-                      season.icon
-                    )}
+                    <Image
+                      src={season.iconSrc}
+                      alt={season.label}
+                      width={32}
+                      height={32}
+                      className={`w-8 h-8 transition-all duration-300 ${
+                        activeSeason === season.id
+                          ? 'brightness-0 invert'
+                          : ''
+                      }`}
+                      style={activeSeason === season.id ? {} : { filter: 'invert(35%) sepia(18%) saturate(1000%) hue-rotate(109deg) brightness(95%) contrast(92%)' }}
+                    />
                   </div>
                 </div>
                 <div className="flex-1">
