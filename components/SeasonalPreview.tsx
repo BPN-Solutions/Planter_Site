@@ -115,7 +115,15 @@ export default function SeasonalPreview() {
                 <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-12">
                   <h3 className="text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-[var(--font-poppins)] font-bold tracking-[0.2em] md:tracking-[0.25em] lg:tracking-[0.3em] uppercase flex items-center gap-4">
                     <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
-                      {season.icon}
+                      {season.iconSrc && (
+                        <Image
+                          src={season.iconSrc}
+                          alt={season.label}
+                          width={56}
+                          height={56}
+                          className="w-10 h-10 lg:w-12 lg:h-12 brightness-0 invert"
+                        />
+                      )}
                     </div>
                     {season.label.split('').join(' ')}
                   </h3>
@@ -225,7 +233,15 @@ export default function SeasonalPreview() {
               <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
                 <h3 className="text-white text-3xl sm:text-4xl font-[var(--font-poppins)] font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase flex items-center gap-3">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
-                    {season.icon}
+                    {season.iconSrc && (
+                      <Image
+                        src={season.iconSrc}
+                        alt={season.label}
+                        width={48}
+                        height={48}
+                        className="w-8 h-8 sm:w-10 sm:h-10 brightness-0 invert"
+                      />
+                    )}
                   </div>
                   {season.label.split('').join(' ')}
                 </h3>

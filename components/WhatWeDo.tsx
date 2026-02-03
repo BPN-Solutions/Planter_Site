@@ -252,7 +252,17 @@ export default function WhatWeDo() {
                 <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-12">
                   <h3 className="text-white group-hover:text-white/80 transition-colors duration-300 text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-[var(--font-poppins)] font-bold tracking-[0.15em] md:tracking-[0.2em] lg:tracking-[0.25em] uppercase flex items-center gap-4">
                     <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
-                      {service.icon}
+                      {service.iconSrc ? (
+                        <Image
+                          src={service.iconSrc}
+                          alt={service.title}
+                          width={48}
+                          height={48}
+                          className="w-8 h-8 lg:w-10 lg:h-10 brightness-0 invert"
+                        />
+                      ) : (
+                        service.icon
+                      )}
                     </div>
                     {service.title.split(' ').map(word => word.split('').join(' ')).join('  ·  ')}
                     <svg className="w-8 h-8 lg:w-10 lg:h-10 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -297,7 +307,17 @@ export default function WhatWeDo() {
               <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
                 <h3 className="text-white group-hover:text-white/80 group-active:text-white/80 transition-colors duration-300 text-xl sm:text-2xl font-[var(--font-poppins)] font-bold tracking-[0.1em] sm:tracking-[0.12em] uppercase flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
-                    {service.icon}
+                    {service.iconSrc ? (
+                      <Image
+                        src={service.iconSrc}
+                        alt={service.title}
+                        width={40}
+                        height={40}
+                        className="w-8 h-8 brightness-0 invert"
+                      />
+                    ) : (
+                      service.icon
+                    )}
                   </div>
                   {service.title.split(' ').map(word => word.split('').join(' ')).join('  ·  ')}
                   <svg className="w-6 h-6 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
