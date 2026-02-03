@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const services = [
   {
@@ -24,13 +25,7 @@ const services = [
     description: 'Special occasion decorations for holidays, life events, and celebrations. One-time installations.',
     href: '/seasonal-decor',
     image: '/images/seasonal-decor.jpeg',
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="8" strokeWidth={1.5} />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4c1 2 2 3 4 3M20 12c-2 1-3 2-3 4M12 20c-1-2-2-3-4-3M4 12c2-1 3-2 3-4" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v.01M16 12h.01M12 16v.01M8 12h.01" />
-      </svg>
-    ),
+    iconSrc: '/icons/4seasons.png',
   },
   {
     id: 'irrigation',
@@ -163,11 +158,26 @@ export default function WhatWeDo() {
                   className={`flex-shrink-0 rounded-full flex items-center justify-center transition-all duration-300 ${
                     activeService === service.id
                       ? 'w-14 h-14 bg-forest-600 text-white'
-                      : 'w-12 h-12 bg-white text-forest-600 border-2 border-gray-200'
+                      : 'w-12 h-12 bg-white border-2 border-gray-200 text-forest-700'
                   }`}
                 >
                   <div className={activeService === service.id ? 'scale-110' : ''}>
-                    {service.icon}
+                    {service.iconSrc ? (
+                      <Image
+                        src={service.iconSrc}
+                        alt={service.title}
+                        width={32}
+                        height={32}
+                        className={`w-8 h-8 transition-all duration-300 ${
+                          activeService === service.id
+                            ? 'brightness-0 invert'
+                            : ''
+                        }`}
+                        style={activeService === service.id ? {} : { filter: 'invert(35%) sepia(18%) saturate(1000%) hue-rotate(109deg) brightness(95%) contrast(92%)' }}
+                      />
+                    ) : (
+                      service.icon
+                    )}
                   </div>
                 </div>
                 <div className="flex-1">
