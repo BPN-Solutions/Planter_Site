@@ -14,29 +14,31 @@ export const metadata: Metadata = {
   title: 'Planter Business | Your Private Gardener',
   description: 'Professional seasonal planters, designed and installed for you. Serving the Detroit metro area with planter subscriptions, seasonal decor, irrigation, and maintenance services.',
   keywords: 'planter subscriptions, seasonal planters, outdoor decor, Detroit landscaping, container gardening, seasonal decor, irrigation, plant maintenance',
+  themeColor: '#267854',
   icons: {
     icon: '/images/logo.png',
     apple: '/images/logo.png',
   },
   openGraph: {
-    title: 'Planter Business | Your Private Gardener',
+    title: 'Detroit Style Planter Company | Your Private Gardener',
     description: 'Professional seasonal planters, designed and installed for you.',
     type: 'website',
     url: 'https://dsplanter.com',
+    siteName: 'Detroit Style Planter Company',
     images: [
       {
-        url: '/images/logo.png',
+        url: '/images/meta_image.png',
         width: 1200,
-        height: 1200,
-        alt: 'Detroit Style Planter Company Logo',
+        height: 630,
+        alt: 'Detroit Style Planter Company',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Planter Business | Your Private Gardener',
+    title: 'Detroit Style Planter Company | Your Private Gardener',
     description: 'Professional seasonal planters, designed and installed for you.',
-    images: ['/images/logo.png'],
+    images: ['/images/meta_image.png'],
   },
 };
 
